@@ -46,7 +46,7 @@ class QuizApp:
         quiz_view = column(header, self._timer, self._card, self._answers, self._status, visible=False)
         self._result = ft.Text(size=18, text_align=ft.TextAlign.CENTER)
         buttons = row(StartButton(content="Сыграть ещё", width=275, on_click=self._begin_game),
-                      StartButton(content="Сменить игрока", width=275, on_click=self._on_switch))
+                      StartButton(content="Сменить имя", width=275, on_click=self._on_switch))
         result_view = column(self._result, buttons, visible=False)
         self._views = (login_view, quiz_view, result_view)
         self._board = LeaderboardTable(columns=LeaderboardTable.make_columns())
